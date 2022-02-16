@@ -1,0 +1,25 @@
+{
+  "cards": [
+    {
+      "img": "img/450.png",
+      "title": "Б/у запчасти для грузовых авто из Европы",
+      "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer."
+    },
+    {
+      "img": "img/Lov.png",
+      "title": "Автомойка грузовых и легковых авто",
+      "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer."
+    },
+    {
+      "img": "img/PngItem.png",
+      "title": "Магазин аксессуаров",
+      "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer."
+    },
+    {
+      "img": "img/acce.png",
+      "title": "Пункт замены масла легковых авто",
+      "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer."
+    }
+  ],
+  "requests": []
+}
