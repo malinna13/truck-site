@@ -15,6 +15,7 @@
     <title>Truck service</title>
   </head>
   <body>
+    <div class="notification">Заявка отправлена!</div>
     <nav>
       <div class="nav-top-menu">
         <div class="container">
@@ -77,7 +78,7 @@
                 <li><a href="#">Контакты</a></li>
               </ul>
             </div>
-            <a id="ctaBtn" class="nav-bottom-item button">Заказать звонок</a>
+            <a id="ctaBtn" class="nav-bottom-item button">Зарегистрироваться</a>
           </div>
         </div>
       </div>
@@ -87,22 +88,26 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h3 class="modal-header">Заказать обратный звонок</h3>
+        <h3 class="modal-header">Стань нашим партнером</h3>
         <form>
           <input
             class="form-input"
             type="text"
-            id="name"
-            placeholder="Имя"
-            name="name"
+            id="pname"
+            placeholder="Название компании"
+            name="pname"
           /><input
             class="form-input"
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Телефон"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Пароль"
           />
-          <input class="submit button" type="submit" value="Отправить" />
+          <input
+            class="submit-company button"
+            type="submit"
+            value="Отправить"
+          />
         </form>
       </div>
     </div>
@@ -114,19 +119,149 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />Nunc
             odio in et, lectus sit lorem id integer.
           </p>
-          <a class="button hero-button">Чета сделать</a>
+          <a href="#map" class="button hero-button">Чета сделать</a>
         </div>
       </div>
     </section>
+    <section class="half-section who container">
+      <div class="half-contents">
+        <h2 class="uslugi-header">У вас вопрос кто мы а кто мы</h2>
+        <p class="hero-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in
+          et, lectus sit lorem id integer. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id
+          integer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          odio in et, lectus sit lorem id integer.
+        </p>
+      </div>
+      <div class="half">
+        <img src="img/Group 58.png" alt="logos" />
+      </div>
+    </section>
+    <section class="photos container">
+      <h2 class="uslugi-header">Фоточки</h2>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/unsplash_20qcctvyR1Q.jpg" alt="photo1" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/unsplash_21.jpg" alt="photo2" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/unsplash_22.jpg" alt="photo3" />
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
     <section class="uslugi">
-      <h2 class="uslugi-header">Любые услуги за ваши денишки</h2>
+      <h2 class="uslugi-header">Любые услуги от наших партнеров</h2>
       <p class="uslugi-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc<br />odio
         in et, lectus sit lorem id integer.
       </p>
       <div class="uslugi-cards"></div>
     </section>
-    <div class="container"></div>
+    <section id="map" class="half-section">
+      <div class="half-contents map-section">
+        <h2 class="uslugi-header">Куда везем?</h2>
+        <p class="hero-text">Постройте самый удобный маршрут с нами:</p>
+        <form id="google">
+          <div class="direction">
+            <label for="from">Откуда:</label>
+            <select name="from" id="from" form="google">
+              <option value="null">Выберите...</option>
+            </select>
+          </div>
+          <div class="direction">
+            <label for="to">Куда:</label>
+            <select name="to" id="to" form="google">
+              <option value="null">Выберите...</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="map">
+        <iframe
+          width="720"
+          height="541"
+          style="border: 0"
+          loading="lazy"
+          allowfullscreen
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBT4vo586Sty_hpBfsS1XhQaKxDshEZ4_g&q=Kazakhstan"
+        >
+        </iframe>
+      </div>
+    </section>
+    <section class="questions">
+      <div class="questions-contents">
+        <h2 class="questions-header">Остались вопросы?</h2>
+        <p class="hero-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in
+          et, lectus sit lorem id integer.
+        </p>
+        <form class="questions-form">
+          <input
+            class="form-input"
+            type="text"
+            id="name"
+            placeholder="Имя"
+            name="name"
+          /><input
+            class="form-input"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Номер телефона"
+          />
+          <input class="submit button" type="submit" value="Отправить" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-nav">
+          <div class="footer-logo">
+            <a href="#"><img src="img/logo-white.png" alt="logo" /></a>
+          </div>
+          <div class="footer-links">
+            <div class="footer-links-col">
+              <h5 class="col-header">Главная</h5>
+              <a href="#" class="footer-link">Это мы</a>
+              <a href="#" class="footer-link">Кто мы</a>
+              <a href="#" class="footer-link">Почему мы?</a>
+              <a href="#" class="footer-link">Остались вопросы</a>
+              <a href="#" class="footer-link">Контакты</a>
+            </div>
+            <div class="footer-links-col">
+              <h5 class="col-header">Контакты</h5>
+              <a href="#" class="footer-link">+7 (708) 802 88 88</a>
+              <a href="#" class="footer-link">+7 (708) 803 88 88</a>
+              <a href="#" class="footer-link">+7 (708) 51 51 518</a>
+              <a href="#" class="footer-link">+7 (700) 51 51 518</a>
+              <a href="#" class="footer-link">+7 (708) 802 88 88</a>
+              <a href="#" class="footer-link">г. Бишкек, ул. Ляляля 69</a>
+            </div>
+            <div class="footer-links-col">
+              <h5 class="col-header">Следите за нами</h5>
+              <a href="#" class="footer-link">truck_service_ofFicIaL</a>
+              <a href="#" class="footer-link">truck_service_ofFicIaL</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-coryright">
+          Copyright © Truck Services 2022. All rights reserved.
+        </div>
+      </div>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>

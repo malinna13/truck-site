@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 ul {
   list-style: none;
 }
@@ -14,6 +17,23 @@ body {
   width: 1440px;
   margin: 0 auto;
   /* background: rgba(0, 0, 0, 0.03); */
+}
+.notification {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(152, 100%, 87%);
+  padding: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  color: #333333;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 5px 5px 10px;
 }
 nav {
   background: #fff;
@@ -221,17 +241,19 @@ nav {
   gap: 20px;
 }
 .form-input {
+  color: #979797;
   border: none;
-  border-radius: 5px;
-  padding: 10px 23px;
+  padding: 18px 22px;
   font-weight: 600;
-  background-color: rgba(0, 0, 0, 0.1);
+  background: rgba(71, 98, 255, 0.08);
+  border-radius: 8px;
   font-size: 16px;
   font-weight: normal;
   line-height: 19px;
 }
 form .button {
   font-size: 16px;
+  padding: 18px 22px;
 }
 /* The Close Button */
 .close {
@@ -254,4 +276,213 @@ form .button {
   top: 0;
   background: #fff;
   width: 1440px;
+  z-index: 2;
+}
+.half-section {
+  display: flex;
+  justify-content: space-between;
+}
+.who {
+  padding-block: 67px;
+  gap: 70px;
+}
+.half-contents {
+  width: 708px;
+}
+.map-section {
+  padding-top: 96px;
+  text-align: center;
+}
+.photos {
+  padding-block: 56px;
+}
+.photos .uslugi-header {
+  margin-bottom: 39px;
+}
+.questions {
+  height: 687px;
+  padding-block: 70px;
+  background: url(img/truck-driver-opening-reservoir-tank-refuel-truck-holding-thumbs-up\ 1.jpg);
+}
+.questions-contents {
+  padding: 40px 70px;
+  border-radius: 15px;
+  background: #ffffff;
+  width: 611px;
+  height: 548px;
+  margin: auto 664px;
+}
+.questions-form {
+  display: flex;
+  flex-direction: column;
+}
+.questions-form .submit {
+  margin-top: 37px;
+}
+.questions-form .form-input:first-child {
+  margin-bottom: 23px;
+}
+.questions-form .form-input:focus-visible {
+  outline: #97979744 1px solid;
+}
+.questions-header {
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 68px;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+footer {
+  background: #1a1a1a;
+  padding-top: 50px;
+}
+.footer-coryright {
+  border-top: 0.7px solid #474747;
+  font-size: 12px;
+  line-height: 24px;
+  color: #d9dbe1;
+  padding-block: 18px;
+}
+.footer-nav {
+  display: flex;
+  gap: 76px;
+}
+.footer-links {
+  display: flex;
+  margin-bottom: 67px;
+}
+.footer-links-col {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.col-header {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.footer-link {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 8px;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.footer-link:hover {
+  color: #999;
+}
+#google {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.direction {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#google label {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: start;
+  color: #979797;
+}
+#google select {
+  color: #979797;
+  width: 200px;
+  border: none;
+  padding: 18px 22px;
+  font-weight: 600;
+  background: rgba(71, 98, 255, 0.08);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 19px;
+}
+
+#google select:focus-visible {
+  outline: #97979744 1px solid;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
